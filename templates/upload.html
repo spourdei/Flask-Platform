@@ -1,0 +1,54 @@
+   <!DOCTYPE HTML>
+<html>
+<body class="">
+
+	<head>	
+		<title>Index</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/uploadstyle.css') }}">
+	</head>
+
+   <title>Upload</title>
+   <div id="wrapper">
+   <section id="mainnn">
+    <form method=post enctype=multipart/form-data>
+      <input type=file id="file" name="file" multiple="" onchange="javascript:updateList()" >
+      <br/>
+<div style="color: white;text-indent: -300px;font-family: inherit;"> Selected files:</div>
+	<div style=" position: absolute; color: white; text-indent: 60px; " id="fileList" style="
+    position: absolute;
+"></div>
+      <p>  </p>
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+
+
+	<script type="text/javascript">
+	  $(document).ready(function(){
+  	$('form input').change(function () {
+
+  });
+});
+
+	  updateList = function() {
+  var input = document.getElementById('file');
+  var output = document.getElementById('fileList');
+
+  output.innerHTML = '<ul>';
+  for (var i = 0; i < input.files.length; ++i) {
+    output.innerHTML += '<li>' + input.files.item(i).name + '</li>';
+  }
+  output.innerHTML += '</ul>';
+}
+	  	</script>
+      <script>
+function goBack() {
+  window.history.back();
+}
+</script>
+      <button type="submit">Upload</button>
+
+    </form>
+</section></div>
+</body>
+</html>

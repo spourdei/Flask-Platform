@@ -1,0 +1,28 @@
+<body>
+<div class="form-style-5">
+<head>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/registerstyle.css') }}">
+
+</head>
+ <form method="POST">
+    <fieldset>
+<legend class="copy"><span class="number"></span> Change Password</legend>
+<p> Username: {{ uname }} </p>
+
+<input type="password" name="oldpassw" class="form-control" placeholder="Current Password" id="oldpassw">
+<input type="password" name="newpassw" class="form-control" placeholder="New Password" id="newpassw">
+<input name="uname" id="uname-hidden-field" type="hidden" value="{{uname}}" />
+
+</fieldset>
+
+<input type="submit" value="Change Password" />
+</form>
+</div>
+ 	<script>
+//  var id = window.location.href.split('/').pop()
+//  document.getElementById("username").innerHTML = "Username: " + id
+
+// document.getElementById("uname-hidden-field").value = id
+
+</script>
+</body>

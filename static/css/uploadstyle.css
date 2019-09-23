@@ -1,0 +1,95 @@
+body{
+  background: #484747;
+}
+section {
+    display: block;
+  }
+form{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -100px;
+  margin-left: -250px;
+  width: 500px;
+  height: 200px;
+  border: 4px dashed #fff;
+  background: #737373;
+}
+form p{
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: 170px;
+  color: #ffffff;
+  font-family: Arial;
+}
+
+form span{
+    width: 100%;
+  color: #ffffff;
+  font-family: inherit;
+}
+form input{
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  opacity: 0;
+  /* background: blue; */
+}
+form button{
+  margin: 0;
+  color: #fff;
+  background: #00000085;
+  border: none;
+  width: 508px;
+  height: 35px;
+  margin-top: 10px;
+  margin-left: -4px;
+  border-radius: 4px;
+  border-bottom: 4px solid #c3c3c3;
+  transition: all .2s ease;
+  outline: none;
+  position: relative;
+  /* border-color: #090e9e; */
+}
+form button:hover{
+  background: #00000085;
+  color: #0C5645;
+}
+form button:active{
+  border:0;
+}
+
+#mainnn {
+    -moz-transform-origin: 50% 50%;
+    -webkit-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    -moz-transform: rotateX(0deg);
+    -webkit-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+    -moz-transition: opacity 1s ease, -moz-transform 1s ease;
+    -webkit-transition: opacity 1s ease, -webkit-transform 1s ease;
+    -ms-transition: opacity 1s ease, -ms-transform 1s ease;
+    transition: opacity 1s ease, transform 1s ease;
+    padding: 4.5em 3em 3em 3em;
+    background: #ffffff;
+    border-radius: 4px;
+    cursor: default;
+    max-width: 100%;
+    opacity: 0.95;
+    position: relative;
+    text-align: center;
+    width: 50%;
+    /* object-fit: contain; */
+    position: relative;
+    margin: auto;
+    margin-top: 10%;
+    height: 200px;
+  }
+
+

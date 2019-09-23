@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+	<head>
+		<title>User page</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+		
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="mainnn">
+						<header>
+							<h1>My Files</h1>
+							<p>Username: {{ uname }}</p>
+						
+							{% if files %}
+													<ul style="text-align: left;">
+
+						    {% for file in files %}
+
+						    <div class="hover_img">
+							 <a href="#">
+							   {{ file }} <span><img src="/static/uploadedfiles/{{ uname }}/{{ file }}"/></span>
+							 </a>
+
+							<button class="open-button" onclick='openForm("{{file}}")'>Rename</button>
+
+						      	<div class="form-popup" id="myForm-{{file}}">
+
+							  	<form method=post class="form-container">
+								<h1 style=" font-size: 90%; ">Rename</h1>
+							    <input type="text" placeholder="Enter New Name" name="newName" required>
+						      	<input name="filenameRename"  id="uname-hidden-field" type="hidden" value="{{ file }}" />
+
+								<input type="submit" class="smaller" name="rename" value="Rename" onclick='closeForm("{{file}}")' style="width: 80%;margin: auto;position: inherit;">
+															    <button type="submit" class="btn cancel" name "rename" onclick='closeForm("{{file}}")'>Close</button>
+
+							  </form>
+							</div>
+						</form>
+							 	<form method=post style="display:inline;">
+							 	<input type="submit" class="smaller"  name="remove" value="Remove"/> 
+						      	<input name="filename" id="uname-hidden-field" type="hidden" value="{{file}}" /></form>
+							</div> 	
+
+
+						    {% endfor %} </ul>
+
+						    {% else %}
+							<p> You don't have any files </p>
+							<form method=post> <input type="submit" class="smaller"  name="upload" value="Upload"> 
+							{% endif %}	
+						
+						</header>
+						<footer>
+					
+						</footer>
+					</section>
+
+				<!-- Footer -->
+					<footer id="footer">
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script>
+				if ('addEventListener' in window) {
+					window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-preload\b/, ''); });
+					document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
+				}
+			</script>
+
+	</body>
+
+<script>
+function openForm(index) {
+  document.getElementById("myForm-" + index).style.display = "block";
+}
+
+function closeForm(index) {
+  document.getElementById("myForm-" + index).style.display = "none";
+}
+</script>
+
+</body>
+</html>

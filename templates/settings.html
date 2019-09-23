@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Settings</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+		
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="mainn">
+						<header>
+							<h1>Settings </h1>
+							<p>Username: {{ uname }}</p>
+
+						</header>
+						<footer>
+						<form method="POST">
+						<input type="submit" name="changepw" value="Change Password"> 						<div class="gap"></div>
+						<input type="submit" name="delete" value="Delete Account"> 						<div class="gap"></div>
+
+						<input type="submit" name="logOut" value="Log Out">
+<input type="button" value="Back" onclick="window.history.back()" />
+
+						</form>
+
+						</footer>
+					</section>
+
+				<!-- Footer -->
+					<footer id="footer">
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script>
+				if ('addEventListener' in window) {
+					window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-preload\b/, ''); });
+					document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
+				}
+			</script>
+
+	</body>
+</html>
